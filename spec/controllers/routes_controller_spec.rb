@@ -42,12 +42,13 @@ RSpec.describe RoutesController, type: :controller do
           start_node: ["alpha", "beta", "gamma", "delta", "theta", "lambda", "tau", "psi", "omega"].sample, 
           end_node: ["alpha", "beta", "gamma", "delta", "theta", "lambda", "tau", "psi", "omega"].sample,
           start_time: "2010-10-06T11:22:02",
+          end_time: "2010-10-06 11:22:02",
          }
     
         get :create, method: :post, params: params, as: :json
     
         expect(response).to have_http_status(422)
-        expect(JSON.parse(response.body)).to eq({"error"=>"Validation failed: Source can't be blank, End time Invalid DateTime"})
+        expect(JSON.parse(response.body)).to eq({"error"=>"Validation failed: Source can't be blank, End time ts Invalid DateTime"})
         expect(Route.count).to eq(0)
     
       end

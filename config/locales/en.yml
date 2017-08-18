@@ -25,7 +25,7 @@ en:
       models:
         route:
           attributes:
-            start_time:
+            start_time_ts:
               invalid_datetime: "Invalid DateTime"
-            end_time:
+            end_time_ts:
               invalid_datetime: "Invalid DateTime"
