@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :route do
-    passphrase "MyString"
-    soutce 1
-    start_node 1
-    end_node 1
-    start_time ""
-    end_time ""
+    passphrase { Faker::Zelda.character }
+    source ["sentinels", "sniffers", "loopholes"].sample
+    start_node ["alpha", "beta", "gamma", "delta", "theta", "lambda", "tau", "psi", "omega"]
+    end_node ["alpha", "beta", "gamma", "delta", "theta", "lambda", "tau", "psi", "omega"]
+    start_time "2010-09-06T12:27:00"
+    end_time "2010-10-06T11:22:02"
   end
 end
