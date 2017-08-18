@@ -6,7 +6,7 @@ class Route < ApplicationRecord
   NODES = [ :alpha, :beta, :gamma, :delta, :theta, :lambda, :tau, :psi, :omega ]
   TIME_FORMAT = "yyyy-mm-ddThh:nn:ssZ"
   
-  validates :passphrase_digest, presence: true
+  validates :passphrase_digest, :start_node, :end_node, :source, presence: true
   validates_datetime :start_time, :end_time, format: TIME_FORMAT
   
   enum source: [ :sentinels, :sniffers, :loopholes ]

@@ -2,12 +2,12 @@ class RoutesController < ApplicationController
   
   def index
     @routes = Route.all
-    render json: @routes
+    json_response(@routes, :ok)
   end
   
   def create
     @route = Route.create!(route_params)
-    render json: @routes
+    json_response(@routes, :created)
   end
   
     
