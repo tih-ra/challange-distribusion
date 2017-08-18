@@ -13,14 +13,12 @@
 ActiveRecord::Schema.define(version: 20170818121329) do
 
   create_table "routes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "passphrase"
-    t.integer  "soutce"
+    t.string   "passphrase_digest"
+    t.integer  "source"
     t.integer  "start_node"
     t.integer  "end_node"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "start_time_ts"
+    t.datetime "end_time_ts"
   end
 
 end
