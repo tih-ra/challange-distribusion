@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :route do
-    passphrase { Faker::Zelda.character }
+    passphrase "my new password"
     source ["sentinels", "sniffers", "loopholes"].sample
     start_node ["alpha", "beta", "gamma", "delta", "theta", "lambda", "tau", "psi", "omega"].sample
     end_node ["alpha", "beta", "gamma", "delta", "theta", "lambda", "tau", "psi", "omega"].sample
